@@ -193,13 +193,4 @@
     | Tues/Thurs | 11:00-12:20  | MATH 009 - Calculus I                  |
     | Friday     | 13:00-15:50  | HIST 010 - World History               |
 
-- Helps the student visualize how courses fit into their weekly schedule.
-
----
-
-## TL;DR
-
-- Store prerequisites in your data.
-- Agent Builder retrieves them as part of the course chunks.
-- The LLM reasons about whether the student meets prerequisites.
-- Only recommend courses the student is eligible to take.
+- Helps students visualize how courses fit into their weekly schedule.
