@@ -1,5 +1,5 @@
 
-# Hybrid RAG Pipeline for Course Recommendations
+# Hybrid RAG Pipeline for Course Recommendations - built fully using google cloud.
 
 ---
 
@@ -34,7 +34,7 @@
   ```
   "What should I take next quarter?"
   ```
-
+.
 ---
 
 ## 2. Agent Builder:
