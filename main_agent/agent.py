@@ -4,6 +4,7 @@ from google.adk.tools.agent_tool import AgentTool
 from . import prompt
 from .sub_agents.CS import cs_agent
 from .sub_agents.ME import me_agent
+from .sub_agents.DS import ds_agent
 from .sub_agents.ONLINE import online_agent
 
 
@@ -25,6 +26,7 @@ schedule_recommender = LlmAgent(
         AgentTool(agent=cs_agent),
         AgentTool(agent=me_agent),
         AgentTool(agent=online_agent),
+        AgentTool(agent=ds_agent)
     ]
 )
 
