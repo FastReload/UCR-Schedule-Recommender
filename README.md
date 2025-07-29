@@ -5,7 +5,7 @@ This directory contains preprocessing scripts used to prepare, filter, and trans
 ## Contents
 
 ### combine.py
-- Merges multiple structured JSONL course files into a single unified dataset.
+- Merges multiple files into a single unified dataset.
 - Ensures deduplication and consistent formatting across merged entries.
 
 ### convert.py
