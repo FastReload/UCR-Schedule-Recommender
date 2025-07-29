@@ -25,7 +25,7 @@ This directory contains preprocessing scripts used to prepare, filter, and trans
 
 ## Expected Input Format
 
-The data used by these scripts must follow the JSON structure below. Each entry should contain the following fields:
+The data used by these scripts must follow the JSON structure below. It is JSON here so thats its easy to verify the columns, please keep the files in JSONL format. Each entry should contain the following fields:
 
 ```json
 {
