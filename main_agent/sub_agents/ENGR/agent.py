@@ -9,26 +9,26 @@ from . import prompt
 
 load_dotenv()
 
-ds_course_retrieval = VertexAiRagRetrieval(
-    name='retrieve_ds_course_info',
+engr_course_retrieval = VertexAiRagRetrieval(
+    name='retrieve_engr_course_info',
     description=(
-        'Use this tool to retrieve course information, prerequisites, degree requirements for Data Science courses, and availble section information from the RAG corpus.'
+        'Use this tool to retrieve course information, prerequisites, degree requirements for Engineering (Prep) courses, and availble section information from the RAG corpus.'
     ),
     rag_resources=[
         rag.RagResource(
 
-            rag_corpus=os.environ.get("DS_CORPUS")
+            rag_corpus=os.environ.get("ENGR_CORPUS")
         )
     ],
     similarity_top_k=20,
     vector_distance_threshold=0.6,
 )
 
-ds_agent = Agent(
+engr_agent = Agent(
     model='gemini-2.5-pro',
-    name='DS_agent',
-    instruction=prompt.DS_PROMPT,
+    name='ENGR_agent',
+    instruction=prompt.ENGR_PROMPT,
     tools=[
-        ds_course_retrieval,
+        engr_course_retrieval,
     ]
 )
