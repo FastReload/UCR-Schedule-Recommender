@@ -2,6 +2,8 @@
 
 This directory contains preprocessing scripts used to prepare, filter, and transform course schedule data into structured JSONL format for the UCR Schedule Recommender system.
 
+## Please run in the same order mentioned here so that the files are consistent.
+
 ## Contents
 
 ### combine.py
@@ -15,6 +17,7 @@ This directory contains preprocessing scripts used to prepare, filter, and trans
 ### course_filter.py
 - Filters the course data based on specific criteria such as department, course type, or division.
 - Useful for creating targeted subsets of the dataset (e.g., Computer Science electives only).
+- Also adds what type of course it is at the end (eg: requirement_category: "core")
 
 ### split.py
 - Splits a large combined course JSONL into smaller files categorized by department or level.
@@ -79,6 +82,7 @@ The data used by these scripts must follow the JSON structure below. Each entry 
   "requirement_category": "other_courses"
 }
 ```
+
 
 ## Requirements
 
