@@ -1,0 +1,20 @@
+ENGR_required_courses = [
+    "ENGR001",
+    "ENGR002",
+    "ENGR010",
+    "ENGR060",
+    "ENGR092",
+    "ENGR096",
+    "ENGR101",
+    "ENGR108",
+    "ENGR109",
+    "ENGR118",
+    "ENGR160",
+    "ENGR170",
+    "ENGR171",
+    "ENGR180W",
+    "ENGR181W",
+    "ENGR190",
+    "ENGR191S",
+    "ENGR198I"
+]

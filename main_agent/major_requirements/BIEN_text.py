@@ -1,0 +1,32 @@
+BIEN_required_courses = [
+    # Lower-division requirements
+    "BIEN001", "BIEN010",
+    "BIOL005A", "BIOL05LA", "BIOL005B",
+    "CHEM001A", "CHEM001B", "CHEM001C",
+    "CHEM01LA", "CHEM01LB", "CHEM01LC",
+    "CHEM01HA", "CHEM01HB", "CHEM01HC", "CHEM1HLA", "CHEM1HLB", "CHEM1HLC",
+    "CHEM008A", "CHEM008B", "CHEM08LA", "CHEM08LB",
+    "CHEM08HA", "CHEM08HB", "CHEM08HLA", "CHEM08HLB",
+    "CS009P",
+    "EE005",
+    "MATH009A", "MATH009B", "MATH009C", "MATH010A", "MATH010B", "MATH046",
+    "MATH09HA", "MATH09HB", "MATH09HC",
+    "PHYS040A", "PHYS040B", "PHYS040C",
+
+    # Upper-division requirements
+    "BIEN101",
+    "BIEN105", "BIEN110", "BIEN120", "BIEN125",
+    "BIEN130", "BIEN130L", "BIEN135",
+    "BIEN140A", "CEE140A",
+    "BIEN155", "BIEN175A", "BIEN175B", "BIEN175C",
+    "BIEN115",
+    "BIEN111",
+
+    # Technical electives
+    "BIEN136", "MSE136",
+    "BIEN137", "BIEN138",
+    "BIEN140B", "CEE140B",
+    "BIEN142",
+    "BIEN159", "CEE159",
+    "BIEN160", "BIEN165", "BIEN166", "BIEN167"
+]
