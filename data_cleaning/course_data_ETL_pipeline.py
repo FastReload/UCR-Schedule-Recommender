@@ -33,41 +33,47 @@ def process_jsonl_file(input_path, output_path):
         'waitCapacity', 'waitCount', 'waitAvailable', 'creditHour', 'maximumEnrollment',
         'enrollment', 'seatsAvailable', 'openSection', 'instructionalMethod',
         'meetingTime.campus', 'meetingTime.category', 'meetingTime.meetingScheduleType',
-        'meetingTime.meetingTypeDescription', 'meetingTime.term'
+        'meetingTime.meetingTypeDescription', 'meetingTime.term', 'meetingTime.startDate',
+        'meetingTime.endDate', 'emailAddress', 'instructionalMethodDescription', 
+        'meetingTime.buuildingDescription', 'meetingTime.building', 'meetingTime.hoursWeek',
+        'sequenceNumber', 'id', 'campusDescription', 'meetingTime.campusDescription'
     ]
     df.drop(columns=drop_cols, inplace=True, errors='ignore')
 
     df.rename(columns={
         'termDesc': 'term',
         'displayName': 'instructor',
-        'instructionalMethodDescription': 'instructionalMethod'
+        'instructionalMethodDescription': 'instructionalMethod',
+        'courseReferenceNumber': 'CRN'
     }, inplace=True)
 
     df['meetingTime.beginTime'] = df['meetingTime.beginTime'].apply(add_colon)
     df['meetingTime.endTime'] = df['meetingTime.endTime'].apply(add_colon)
 
     column_order = [
-        'subjectCourse', 'courseTitle', 'term', 'courseReferenceNumber',
-        'prerequisites', 'sequenceNumber', 'scheduleTypeDescription', 'isSectionLinked',
+        'subjectCourse', 'courseTitle', 'term', 'CRN',
+        'prerequisites', 'scheduleTypeDescription', 'isSectionLinked',
         'creditHours', 'instructionalMethod', 'instructor', 'emailAddress',
-        'campusDescription', 'meetingTime.campusDescription',
         'meetingTime.building', 'meetingTime.buildingDescription', 'meetingTime.room',
-        'meetingTime.startDate', 'meetingTime.endDate', 'meetingTime.beginTime',
-        'meetingTime.endTime', 'meetingTime.hoursWeek', 'meetingTime.meetingType',
+        'meetingTime.beginTime',
+        'meetingTime.endTime', 'meetingTime.meetingType',
         'meetingTime.monday', 'meetingTime.tuesday', 'meetingTime.wednesday',
         'meetingTime.thursday', 'meetingTime.friday', 'meetingTime.saturday',
-        'meetingTime.sunday', 'id'
+        'meetingTime.sunday'
     ]
     df = df[[col for col in column_order if col in df.columns]]
 
+    # Convert 'NumericColumn' to string
+    df['CRN'] = df['CRN'].astype(str)
+
     df['prerequisites'] = df['prerequisites'].replace('', 'no prerequisites')
 
-    mask = (
-        (df['instructionalMethod'].str.lower() == 'online') &
-        (df['meetingTime.beginTime'].isna()) &
-        (df['meetingTime.endTime'].isna())
-    )
-    df.loc[mask, ['meetingTime.beginTime', 'meetingTime.endTime']] = 'asynchronous'
+    #mask = (
+    #    (df['instructionalMethod'].str.lower() == 'online') &
+    #    (df['meetingTime.beginTime'].isna()) &
+    #    (df['meetingTime.endTime'].isna())
+    #)
+    #df.loc[mask, ['meetingTime.beginTime', 'meetingTime.endTime']] = 'asynchronous'
 
     for col in df.columns:
         df[col] = df[col].fillna('unknown')
