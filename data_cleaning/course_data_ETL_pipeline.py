@@ -92,7 +92,14 @@ input_files = [
     "BIEN_courses_filtered.jsonl",
     "ME_courses_filtered.jsonl",
     "MATH_courses_filtered.jsonl",
-    "EE_courses_filtered.jsonl"
+    "EE_courses_filtered.jsonl",
+    "CHE_courses_filtered.jsonl",
+    "BCH_courses_filtered.jsonl",
+    "ENGL_courses_filtered.jsonl",
+    "PHYS_courses_filtered.jsonl",
+    "BUS_courses_filtered.jsonl",
+    "BIOL_courses_filtered.jsonl",
+    "ECON_courses_filtered.jsonl"
 ]
 
 output_files = [
@@ -105,7 +112,14 @@ output_files = [
     "cleaned/BIEN_courses.jsonl",
     "cleaned/ME_courses.jsonl",
     "cleaned/MATH_courses.jsonl",
-    "cleaned/EE_courses.jsonl"
+    "cleaned/EE_courses.jsonl",
+    "cleaned/CHE_courses.jsonl",
+    "cleaned/BCH_courses.jsonl",
+    "cleaned/ENGL_courses.jsonl",
+    "cleaned/PHYS_courses.jsonl",
+    "cleaned/BUS_courses.jsonl",
+    "cleaned/BIOL_courses.jsonl",
+    "cleaned/ECON_courses.jsonl"
 ]
 
 # --- Run the ETL for each pair ---
