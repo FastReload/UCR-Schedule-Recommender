@@ -79,10 +79,14 @@ def student_data_retrieval(student_id: str) -> str:
                           f"First Major: {row.FIRST_MAJOR_CODE}\n"
                           f"Second Major: {row.SECOND_MAJOR_CODE}\n"
                           f"Total Credits Completed: {total_credits}\n")
-        if total_credits >= 90:
-            output.append("Status: Upperclassman")
+        if total_credits < 45:
+            output.append("Standing: Freshman\n")
+        elif total_credits >= 45 and total_credits < 90:
+            output.append("Standing: Sophomore\n")
+        elif total_credits >= 90 and total_credits < 135:
+            output.append("Standing: Junior\n")
         else:
-            output.append("Status: Lowerclassman")
+            output.append("Standing: Senior\n")
 
     except Exception as e:
         return f"Error retrieving student information: {e}"

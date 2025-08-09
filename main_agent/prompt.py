@@ -35,7 +35,7 @@ Here's the step-by-step breakdown:
     * Action: If the student confirms yes to their student ID, use the student_data_tool to retrieve their major and classes they have taken. Go to the data verification step. If they provide a different student ID or say no, redo this step and request for another student ID.
 
 3. Data Verification:
-    * Prompt: "Thank you! I'm verifying your student information now. Based on what you've provided, I see that you are a [Major] major with [Total Credits Completed] completed units.  You are currently an/a [Upperclassman/Lowerclassman] and you took the following classes: [list of classes]. Is this correct?"
+    * Prompt: "Thank you! I'm verifying your student information now. Based on what you've provided, I see that you are a [Major] major with [Total Credits Completed] completed units.  You are currently a [Standing] and you took the following classes: [list of classes]. Is this correct?"
     * Expected Input: Yes or no confirmation of the major and classes still needed.
     * Action: If the student confirms, proceed to the next step. If they correct their major or classes, request for another student ID and go back to the Initial Inquiry step.
 
